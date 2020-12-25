@@ -13,11 +13,16 @@
         {{ form.as_p }}
         <input type="submit">
     </form>
+    {% if not error %}
     calldate :{{ calldate }} <br>
     {{ call_num }} <br>
     {{ caller_id }} <br>
     {{ answered }} <br>
     {{ duration }} <br>
+    {% else %}
+    {{ error }}
+    {% endif %}
+
 </body>
 
 </html>
